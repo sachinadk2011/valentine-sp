@@ -1,0 +1,305 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color:#bd718a;
+  width: 100%;
+  
+}
+
+.envelope{
+  position: relative;
+  cursor: pointer;
+  animation: updown 3s ease-in infinite;
+}
+@keyframes updown{
+  0%, 100%{transform: translateY(0);}
+  50%{transform: translateY(-25px);}
+  
+}
+.back{
+  position: relative;
+  width: 250px;
+  height: 200px;
+  background-color: rgb(38, 38, 172);
+ 
+}
+.font{
+  position: absolute;
+  border-right: 130px solid #6c23a8;
+  border-bottom: 100px solid transparent;
+  border-top: 100px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 120px;
+   z-index: 3;
+}
+.font::before{
+  content: '';
+  position: absolute;
+  border-bottom: 100px solid transparent;
+  border-left: 130px solid #6c23a8;
+  border-top: 100px solid transparent;
+  width: 0;
+  height: 0;
+  top: -100px;
+  left: -120px;
+  
+ 
+}
+.font::after{
+  position: absolute;
+  content: '';
+  border-bottom: 105px solid #772ed6;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  height: 0;
+  width: 0;
+  top: -5px;
+  left: -120px; 
+}
+.top{
+  position: absolute;
+  border-top: 105px solid #772ed6;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  transform-origin: top;
+  transition:  5s;
+  
+}
+.envelope:hover .top{
+  transform: rotateX(160deg);
+  
+}
+.card{
+  position: absolute;
+  background-color: rgb(231, 230, 236);
+  width: 230px;
+  height: 180px;
+  top: 10px;
+  left: 10px;
+  transition: 2s;
+}
+.envelope:hover .card{
+  transform:translateY(-100px);
+z-index: 2;
+}
+.text{
+  position: relative;
+  color: black;
+  width: 80%;
+  
+  
+  
+  top: 5px;
+  left: 40px;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  
+
+}
+
+#uploadedImage{
+  width: 11%;
+  height: auto;
+  position: absolute;
+  
+  
+}
+.srhrt{
+  font-size: 35px;
+  display: inline-block;
+  position: absolute;
+  top: 80px;
+ animation: rotate 5s linear infinite;
+}
+@keyframes rotate{
+  0%{transform: translateY(-10px) rotatey(0) ;}
+  100%{transform: translateY(-10px) rotatey(360deg);}
+} 
+
+
+.heart{
+  position:absolute;
+  background-color: red;
+  width: 70px;
+  height: 70px;
+  top: 50px;
+  left: 70px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px red;
+  animation: zooming 3s linear infinite;
+}
+.heart::before{
+  content: '';
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  border-radius: 50px;
+  top: -40px;
+}
+.heart::after{
+  content: '';
+  position: absolute;
+  right: -40px;
+  border-radius: 50px;
+  width: 70px;
+  height: 70px;
+  background-color: red;
+}
+
+@keyframes zooming{
+  0%{transform: rotate(-45deg) scale(1.2);}
+  
+  
+  100%{transform: rotate(-45deg) scale(1);}
+}
+
+.hrt{
+  position: absolute;
+  background-color: aqua;
+  width: 18px;
+  height: 18px;
+  top: -24px;
+  left: -6px;
+  transform: rotate(-45deg);
+}
+.hrt::before{
+  content: '';
+  position: absolute;
+  background-color: aqua;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  top: -12px;
+}
+.hrt::after{
+  content: '';
+  position: absolute;
+  background-color: aqua;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  right: -12px;
+}
+
+.envelope:hover .hrt{
+  animation: fall 4s forwards;
+}
+@keyframes fall{
+  0%{transform: rotate(-45deg);}
+  100%{
+    transform: rotate(45deg);
+    
+  }
+}
+
+.shadow{
+  position: relative;
+  background-color: rgb(99, 93, 93);
+  width:260px;
+  height: 20px;
+  border-radius: 50%;
+  top: 15px;
+  left: -10px;
+}
+.hearts {
+  position: absolute;  
+  top: 350px;
+}
+.one, .two, .three, .four, .five,.six {
+  background-color: red;
+  display: inline-block;
+  height: 18px;
+  margin:0 10px;
+  position: relative; 
+   transform: rotate(-45deg);
+  width: 18px;
+  top:90px;
+}
+
+.one:before,
+.one:after, .two:before, .two:after, 
+.three:before, .three:after, .four:before,
+ .four:after, 
+.five:before, .five:after, .six::before,
+ .six::after {
+  content: "";
+  background-color: red;
+  border-radius: 9px;
+  height: 18px;
+  position: absolute;
+  width: 18px;
+}
+
+.one:before, .two:before, .three:before, 
+.four:before, .five:before,.six::before {
+  top: -12px;
+  left: 0;
+}
+.one:after, .two:after, .three:after,
+ .four:after, .five:after, .six::after {
+  right: -12px;
+ 
+}
+
+.one {
+  left:-55px;
+  animation: heart 1s ease-out infinite; 
+}
+.two {
+  left:-20px;
+  animation: heart 2s ease-out infinite; 
+}
+.three {
+  left:-10px;
+  animation: heart 1.5s ease-out infinite;
+}
+.four {
+  left:10px;
+  animation: heart 2.3s ease-out infinite;
+}
+.five {
+  left:40px;
+  animation: heart 1.7s ease-out infinite;
+}
+.six {
+  left:75px;
+  animation: heart 2.2s ease-out infinite;
+}
+
+@keyframes heart {
+  0%{
+    transform: translateY(150px) rotate(-45deg) scale(0.3);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-150px) rotate(-45deg) scale(1.5);
+    opacity: 0.5;
+  }
+}
+.smt, .smt1{
+  position: absolute;
+  color: rgb(89, 33, 180);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+.smt{
+  top: 70px;
+  visibility: visible;
+}
+
+.smt1{
+  top: 480px;
+ visibility: hidden;
+}
+
+

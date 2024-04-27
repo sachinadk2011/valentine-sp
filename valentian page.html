@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, shrink-to-fit=no" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#242526" />
+    <title>Valentine Special</title>
+    <link rel="icon" type="image/x-icon" href="page/valentine1.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p>this</p>
+  <div class="containere">
+   <div class="smt">Hey! click on blue heart 
+         &#128153;</div>
+          <div class="smt1">Now, click on your
+       image to go next valentine special
+      &#x1F381; </div>
+     <div class="envelope">
+        <div class="back"></div>
+        <div class="card">
+        <div class="heart"></div>
+        <div class="text"><p>  Happy 
+         <br/> Valentine's day
+         <br/>My Love 
+          <span id="Fnamedisplay"></span>
+        <a href="valentinesp2.html">
+          <img id="image" src="">
+         </a><br/>
+         <span class="srhrt">&#x1F498;</span></p>
+        </div>
+        </div>
+        <div class="font">
+        
+          <div class="hrt"></div>   
+        </div>
+        <div class="top"></div>
+        
+        <div class="shadow"></div>
+        
+        
+     </div>
+     <div class="hearts">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+     </div>
+      </div>
+    <script src="script.js"></script>
+    <script>
+     document.addEventListener("DOMContentLoaded", function() {
+    const envelope = document.querySelector(".envelope");
+    const smt = document.querySelector(".smt");
+    const smt1 = document.querySelector(".smt1");
+
+    // Hide smt on envelope hover
+    envelope.addEventListener("mouseover", function() {
+        smt.style.visibility = "hidden";
+        smt1.style.visibility = "visible";
+    });
+
+    // Show smt on envelope hover out
+    envelope.addEventListener("mouseout", function() {
+        smt.style.visibility = "visible";
+        smt1.style.visibility = "hidden";
+    });
+});
+
+      </script>
+</body>
+</html>

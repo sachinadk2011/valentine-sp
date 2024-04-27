@@ -1,0 +1,203 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fde0e0;
+    width: 100%;
+    
+}
+.hearts {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Cover the full width of the screen */
+    display: flex;
+    
+}
+.one, .two, .three, .four, .five,.six 
+,.seven,.eight,.nine,.ten{
+background-color: red;
+display: inline-block;
+height: 18px;
+margin:0 10px;
+position: relative; 
+transform: rotate(-45deg);
+width: 18px;
+top:90px;
+}
+
+.one:before,
+.one:after, .two:before, .two:after, 
+.three:before, .three:after, .four:before,
+.four:after, 
+.five:before, .five:after, .six::before,
+.six::after,.seven:before, .seven:after,.eight:before, 
+.eight:after,.nine:before, .nine:after
+,.ten:before, .ten:after {
+content: "";
+background-color: red;
+border-radius: 9px;
+height: 18px;
+position: absolute;
+width: 18px;
+}
+
+.one:before, .two:before, .three:before, 
+.four:before, .five:before,.six::before, 
+.seven:before,.eight:before,.nine:before,
+.ten:before{
+top: -12px;
+left: 0;
+}
+.one:after, .two:after, .three:after,
+.four:after, .five:after, .six::after,
+.seven:after,.eight:after,.nine:after
+,.ten:after {
+right: -12px;
+
+}
+
+.one {
+left:40px;
+
+animation: heart 2.5s ease-out infinite; 
+}
+.two {
+left:55px;
+animation: heart 2.6s ease-out infinite; 
+}
+.three {
+left:70px;
+animation: heart 2.5s ease-out infinite;
+}
+.four {
+left:75px;
+animation: heart 2.7s ease-out infinite;
+}
+.five {
+left:80px;
+animation: heart 2.9s ease-out infinite;
+}
+.six {
+left:85px;
+animation: heart 3.2s ease-out infinite;
+}
+.seven {
+left:90px;
+animation: heart 2.3s ease-out infinite;
+}
+.eight {
+left:95px;
+animation: heart 2.7s ease-out infinite;
+}
+.nine {
+left:100px;
+animation: heart 2.6s ease-out infinite;
+}
+.ten {
+left:105px;
+animation: heart 2.5s ease-out infinite;
+}
+
+@keyframes heart {
+0%{
+transform: translateY(0) rotate(-45deg) scale(0.3);
+opacity: 1;
+}
+100%{
+transform: translateY(-800px) rotate(-45deg) scale(1.5);
+opacity: 0.5;
+}
+}
+@media screen and (min-width: 768px) {
+    .one, .two, .three, .four
+    ,.five, .six, .seven, .eight
+    , .nine, .ten {
+        margin: 50px; /* Adjust margin for smaller screens */
+    }
+}
+@media screen and (max-width: 768px) {
+    .one, .two, .three, .four
+    ,.five, .six, .seven, .eight
+    , .nine, .ten {
+        margin: 5px; /* Adjust margin for smaller screens */
+    }
+}
+.box{
+text-align: center;
+padding: 10px;
+margin-top: 100px;
+width: 250px;
+margin-left: 30%;
+border: 1px solid transparent;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.content{
+    text-align: center;
+    color: red;
+}
+h1 {
+    color: #ff4d4d; /* Red text */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+input[type="text"],
+input[type="file"]{
+    padding: 12px 20px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 300px;
+    background-color: black; /* White input background */
+    border: 1px solid #ccc; /* Light gray border */
+    padding-left: 15px;
+    color: rgb(223, 78, 174);
+}
+button {
+    background-color: #ff4d4d; /* Red button */
+    border-color: transparent;
+    color: white;
+    transform: rotate(45deg) ;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+button::before,button::after{
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 55px;
+    background-color: #ff4d4d;
+}
+button::before{
+    top: -48px;
+    left: -2px;
+}
+button::after{
+    top: -1px;
+    left: -45px;
+    
+}
+
+.button{
+    transform: rotate(-45deg) translateY(15px);
+    color: rgb(112, 45, 175);
+
+}
+button:hover,button:hover::before,button:hover::after  {
+    background-color: #ff7676; /* Lighter red on hover */
+    
+}
