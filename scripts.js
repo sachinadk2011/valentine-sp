@@ -16,13 +16,7 @@ form.addEventListener('submit', (event) => {
     return;
   }
 
-  const cloudName = 'df4pswtdc';
-  const apiKey = '865121436834296';
-  const apiSecret = 'kpsrrMBExMZaYBFPjvsARr1Dnzw';
-  const uploadPreset = 'ysuddcd2'; // Replace with your actual upload preset
-  const cloudinaryUrl = `https://res.cloudinary.com/${cloudName}/image/upload/samples/`;
-  //https://res.cloudinary.com/${cloudName}/image/upload/valentine special photo/sample.jpg
-
+ 
   const formData = new FormData();
   formData.append('file', imageData);
   formData.append('upload_preset', uploadPreset); // Use upload preset for transformations etc.
